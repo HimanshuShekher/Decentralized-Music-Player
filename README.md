@@ -1,13 +1,48 @@
-# Decentralized-Music-Player where all Albums are NFT collections on Opensea and individual songs as NFT's.
+# NFT Music Player
 
-We can play different songs , skip it, increase or decrease the volume and change the albums.
+## Technology Stack & Tools
 
-We have used react as frontend to interact with the 
-We have used Moralis as the pull NFT collection metadata from the blockchain and also use moralis to upload the songs on IPFS decentralized database.
-We have used solidity smart conract to mint the items as NFT's with the smart contracts.
+- Solidity (Writing Smart Contract)
+- Javascript (React & Testing)
+- [Ethers](https://docs.ethers.io/v5/) (Blockchain Interaction)
+- [Hardhat](https://hardhat.org/) (Development Framework)
+- [Ipfs](https://ipfs.io/) (Metadata storage)
+- [React routers](https://v5.reactrouter.com/) (Navigational components)
+
+## Requirements For Initial Setup
+- Install [NodeJS](https://nodejs.org/en/), should work with any node version below 16.5.0
+- Install [Hardhat](https://hardhat.org/)
+
+## Setting Up
+### 1. Clone/Download the Repository
+
+### 2. Install Dependencies:
+```
+$ cd music_nfts
+$ npm install
+```
+### 3. Boot up local development blockchain
+```
+$ cd music_nfts
+$ npx hardhat node
+```
+
+### 4. Connect development blockchain accounts to Metamask
+- Copy private key of the addresses and import to Metamask
+- Connect your metamask to hardhat blockchain, network 127.0.0.1:8545.
+- If you have not added hardhat to the list of networks on your metamask, open up a browser, click the fox icon, then click the top center dropdown button that lists all the available networks then click add networks. A form should pop up. For the "Network Name" field enter "Hardhat". For the "New RPC URL" field enter "http://127.0.0.1:8545". For the chain ID enter "31337". Then click save.  
 
 
-![Screenshot 2022-07-30 at 1 16 01 AM](https://user-images.githubusercontent.com/62199596/181833190-778be8d6-0465-43ce-b765-4bc2a4416a5e.png)
+### 5. Run deploy script to migrate smart contracts
+`npm run deploy`
 
+### 6. Run Tests
+`$ npx hardhat test`
 
-![Screenshot 2022-07-30 at 1 16 12 AM](https://user-images.githubusercontent.com/62199596/181833203-e9e3b167-16e4-46a0-9e33-757d2066803d.png)
+### 7. Launch Frontend
+`$ npm run start`
+
+License
+----
+MIT
+
